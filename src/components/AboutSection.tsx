@@ -72,23 +72,23 @@ export const AboutSection: React.FC = () => {
               </div>
             </motion.div>
 
-            <div className="mt-12">
-              <span className="font-sans text-[11px] tracking-[0.3em] uppercase text-gray-400 block mb-10">// Core Skills //</span>
-              <ul className="grid grid-cols-2 gap-y-8 gap-x-12">
-                {skills.map((skill, i) => (
-                  <motion.li
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + (i * 0.05) }}
-                    className="flex items-center gap-6 font-serif text-2xl md:text-3xl border-b border-gray-100 dark:border-white/5 pb-6 group hover:border-black dark:hover:border-white transition-colors"
-                  >
-                    <skill.icon className="text-3xl text-gray-400 dark:text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors" />
-                    <span>{skill.name}</span>
-                  </motion.li>
-                ))}
-              </ul>
+              <div className="mt-12">
+                <span className="font-sans text-[11px] tracking-[0.3em] uppercase text-gray-400 block mb-10 w-full text-center md:text-left">// Core Skills //</span>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
+                  {skills.map((skill, i) => (
+                    <motion.li
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.3 + (i * 0.05) }}
+                      className="flex items-center gap-6 font-serif text-2xl md:text-3xl border-b border-gray-100 dark:border-white/5 pb-6 group hover:border-black dark:hover:border-white transition-all duration-300"
+                    >
+                      <skill.icon className="text-3xl text-gray-400 dark:text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors" />
+                      <span>{skill.name}</span>
+                    </motion.li>
+                  ))}
+                </ul>
 
               {/* Solana Ecosystem Section */}
               <motion.div 
@@ -132,7 +132,7 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="w-full aspect-[4/5] overflow-hidden rounded-sm mt-auto flex items-center justify-center p-4 bg-white dark:bg-transparent shadow-sm dark:shadow-none border border-gray-50 dark:border-none transition-colors"
+              className="hidden lg:flex w-full aspect-[4/5] overflow-hidden rounded-sm mt-auto items-center justify-center p-4 bg-white dark:bg-transparent shadow-sm dark:shadow-none border border-gray-50 dark:border-none transition-colors"
             >
               <img
                 src="/legends/Alexgender_the_great.jpg"
