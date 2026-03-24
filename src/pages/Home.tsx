@@ -87,7 +87,7 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Middle Column: Portrait - Consistent Capsule shape for all devices */}
-        <div className="flex md:col-span-2 items-center justify-center py-12 md:py-0 z-10 order-2 md:order-2 transition-all">
+        <div className="flex flex-col md:col-span-2 items-center justify-center py-12 md:py-0 z-10 order-2 md:order-2 transition-all">
            <div className="relative w-48 sm:w-64 md:w-full aspect-[3/4] rounded-[10rem] overflow-hidden border-8 border-white dark:border-zinc-900 shadow-2xl group mx-auto max-w-[280px] lg:max-w-md xl:max-w-2xl transition-all">
              <div className="absolute inset-0 bg-[#f8f8f8] dark:bg-zinc-800 pointer-events-none opacity-10 z-10" />
             <img 
@@ -97,6 +97,14 @@ export const Home: React.FC = () => {
             />
             {/* Grain Overlay */}
             <div className="absolute inset-0 pointer-events-none opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay z-20" />
+          </div>
+          {/* Signature */}
+          <div className="mt-4 animate-fade-in opacity-0">
+            <img 
+              src="/my_own_signature.svg" 
+              alt="Signature" 
+              className="w-32 md:w-40 lg:w-44 h-auto dark:invert transition-all duration-700 hover:scale-[1.05]"
+            />
           </div>
         </div>
 
